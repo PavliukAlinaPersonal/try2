@@ -1,8 +1,13 @@
-﻿using OpenQA.Selenium;
+﻿
+using OfficeOpenXml;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
+using System.IO.Packaging;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -156,6 +161,18 @@ namespace PracticeTestFramework.Helpers
             return bEqual;
         }
 
+       
+
+        public static IEnumerable<object[]> GetDataFromExel()
+        {
+            APIGoogleTables.APIGoogleTablesCreate();
+            List<object[]> data = new List<object[]>();
+
+            
+            data.Add(new object[] { 1,"ilubli" });
+            return data;
+            
+        }
 
     }
 }

@@ -159,5 +159,11 @@ namespace PracticeTestFramework.Tests
 
         }
 
+        [Test, TestCaseSource(typeof(FunctionsTests), "GetDataFromExel")]
+        public void TestDataFromExel(object num1)
+        {
+
+        }
+
     }
 }
